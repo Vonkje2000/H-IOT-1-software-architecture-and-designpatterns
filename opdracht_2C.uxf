@@ -1,18 +1,20 @@
-<diagram program="umletino" version="15.1"><zoom_level>2</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>928</x><y>366</y><w>56</w><h>14</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>2646</x><y>70</y><w>196</w><h>49</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
 MQttCallback
 --
 --
-/messageArrived (String topic, String message)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>922</x><y>360</y><w>70</w><h>46</h></coordinates><panel_attributes>Cloud.InfrastructureLayer.Mqtt.MqttCommon
+/messageArrived (String topic, String message)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>2625</x><y>49</y><w>245</w><h>161</h></coordinates><panel_attributes>Cloud.InfrastructureLayer.Mqtt.MqttCommon
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>928</x><y>384</y><w>56</w><h>20</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+bg=#5a002c
+layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2646</x><y>133</y><w>196</w><h>70</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
 MQttClientServer
 --
 --
 /publish (String topic, String message)/
 /subscribe(String topic, MqttCallback C)/
-/cleanup()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>922</x><y>408</y><w>80</w><h>76</h></coordinates><panel_attributes>Cloud.InfrastructureLayer.Mqtt.MqttMock
+/cleanup()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>2625</x><y>217</y><w>280</w><h>266</h></coordinates><panel_attributes>Cloud.InfrastructureLayer.Mqtt.MqttMock
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>930</x><y>414</y><w>56</w><h>30</h></coordinates><panel_attributes>MqttBrokerMock
+bg=#5a002c
+layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2653</x><y>238</y><w>196</w><h>105</h></coordinates><panel_attributes>MqttBrokerMock
 (Singleton)
 --
 # Map&lt;String, List&lt;MqttClientMock&gt;&gt; subscribed
@@ -21,7 +23,7 @@ MqttBrokerMock Broker
 # MqttBrokerMock
 subscribe (MqttClientMock sender, String topic)
 unSubscribe (String topic)
-publish (String topic, String message)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>930</x><y>448</y><w>68</w><h>32</h></coordinates><panel_attributes>MqttClientMock
+publish (String topic, String message)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2653</x><y>357</y><w>238</w><h>112</h></coordinates><panel_attributes>MqttClientMock
 --
 # int cid
 # MqttBrokerMock B
@@ -31,9 +33,10 @@ MqttClientMock (MqttBrokerMock)
 publish (String topic, String message)
 subscribe (String topic, MqttCallback C)
 callback (String topicwildcard, String topic, String message)
-cleanup()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>908</x><y>394</y><w>26</w><h>78</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>100;10;10;10;10;370;110;370</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>922</x><y>488</y><w>84</w><h>42</h></coordinates><panel_attributes>Cloud.InfrastructureLayer.Mqtt.MqttPaho
+cleanup()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2576</x><y>168</y><w>91</w><h>273</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>100;10;10;10;10;370;110;370</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>2625</x><y>497</y><w>294</w><h>147</h></coordinates><panel_attributes>Cloud.InfrastructureLayer.Mqtt.MqttPaho
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>930</x><y>494</y><w>70</w><h>32</h></coordinates><panel_attributes>MqttClient
+bg=#5a002c
+layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2653</x><y>518</y><w>245</w><h>112</h></coordinates><panel_attributes>MqttClient
 --
 String geheimetopic
 org.eclipse.paho.client.mqttv3.MqttClient sampleClient
@@ -43,13 +46,14 @@ MqttClient ()
 publish (String topic, String message)
 subscribe (String topic, MqttCallback C)
 callback (String topicwildcard, String topic, String message)
-cleanup()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>908</x><y>394</y><w>26</w><h>126</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>100;10;10;10;10;610;110;610</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>670</x><y>576</y><w>52</w><h>72</h></coordinates><panel_attributes>Tablet.InfrastructureLayer
+cleanup()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2576</x><y>168</y><w>91</w><h>441</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>100;10;10;10;10;610;110;610</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1743</x><y>805</y><w>182</w><h>252</h></coordinates><panel_attributes>Tablet.InfrastructureLayer
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>678</x><y>582</y><w>18</w><h>14</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+bg=#002c5a
+layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1771</x><y>826</y><w>63</w><h>49</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 Observer
 --
 --
-/update()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>678</x><y>616</y><w>36</w><h>28</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+/update()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1771</x><y>945</y><w>126</w><h>98</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 Subject
 --
 Map&lt;Observer, Subject&gt; map
@@ -58,42 +62,48 @@ Subject get (Observer x)
 insertObserver(Observer x)
 removeObserver (Observer x)
 notifyObservers()
-notifyAllObservers()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>684</x><y>594</y><w>6</w><h>26</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;..</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>660</x><y>568</y><w>350</w><h>132</h></coordinates><panel_attributes>Tablet
+notifyAllObservers()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1792</x><y>868</y><w>21</w><h>91</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;..</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1708</x><y>777</y><w>1225</w><h>462</h></coordinates><panel_attributes>Tablet
 --
 bg=blue
-layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>738</x><y>576</y><w>46</w><h>112</h></coordinates><panel_attributes>Tablet._4_DomainLayer
---</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>742</x><y>596</y><w>38</w><h>14</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+layer=-2</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1981</x><y>805</y><w>161</w><h>392</h></coordinates><panel_attributes>Tablet._4_DomainLayer
+--
+bg=#002c5a
+layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1995</x><y>875</y><w>133</w><h>49</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 Display
 --
 --
-/display (String header, String info)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>742</x><y>620</y><w>20</w><h>20</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+/display (String header, String info)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1995</x><y>959</y><w>70</w><h>70</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 Fietstocht
 --
 --
 /int radius()/
 /boolean horeca()/
-/ga()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>742</x><y>662</y><w>20</w><h>16</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+/ga()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1995</x><y>1106</y><w>70</w><h>56</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 GPSTracker
 --
 --
 /int getX()/
-/int getY()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>790</x><y>576</y><w>54</w><h>112</h></coordinates><panel_attributes>Tablet._3_DomainImplLayer
---</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>796</x><y>600</y><w>42</w><h>16</h></coordinates><panel_attributes>DisplayImpl
+/int getY()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>2163</x><y>805</y><w>189</w><h>392</h></coordinates><panel_attributes>Tablet._3_DomainImplLayer
+--
+bg=#002c5a
+layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2184</x><y>889</y><w>147</w><h>56</h></coordinates><panel_attributes>DisplayImpl
 --
 # DisplayServer S
 --
 DisplayImpl (DisplayServer s)
-display (String header, String info)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>778</x><y>600</y><w>22</w><h>6</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>796</x><y>624</y><w>38</w><h>14</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+display (String header, String info)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2121</x><y>889</y><w>77</w><h>21</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2184</x><y>973</y><w>133</w><h>49</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 DisplayServer
 --
 --
-show(String header, String info)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>814</x><y>614</y><w>8</w><h>14</h></coordinates><panel_attributes>lt=&lt;-
-m1=S</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>796</x><y>662</y><w>20</w><h>14</h></coordinates><panel_attributes>GPSTrackerImpl
+show(String header, String info)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2247</x><y>938</y><w>28</w><h>49</h></coordinates><panel_attributes>lt=&lt;-
+m1=S</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2184</x><y>1106</y><w>70</w><h>49</h></coordinates><panel_attributes>GPSTrackerImpl
 --
 --
 int getX()
-int getY()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>670</y><w>40</w><h>6</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;180;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>850</x><y>576</y><w>54</w><h>112</h></coordinates><panel_attributes>Tablet._2_ApplicationLayer
---</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>856</x><y>656</y><w>42</w><h>26</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+int getY()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2058</x><y>1134</y><w>140</w><h>21</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;180;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>2373</x><y>805</y><w>189</w><h>392</h></coordinates><panel_attributes>Tablet._2_ApplicationLayer
+--
+bg=#002c5a
+layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2394</x><y>1085</y><w>147</w><h>91</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 DisplayAttractiesServer
 --
 --
@@ -101,7 +111,7 @@ start (int tid)
 boolean next ()
 stop ()
 getInfo (int tid, int x, int y, int radius, boolean horeca)
-String infoString ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>856</x><y>586</y><w>42</w><h>36</h></coordinates><panel_attributes>UC_DisplayAttracties
+String infoString ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2394</x><y>840</y><w>147</w><h>126</h></coordinates><panel_attributes>UC_DisplayAttracties
 --
 # GPSTracker T
 # Display D
@@ -113,15 +123,16 @@ DisplayAttractiesServer S
 UC_displayAttracties (int id, DisplayAttractiesServer as, Display d)
 ga ()
 stealInRadius (int R)
-stelInHoreca (boolean H)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>774</x><y>586</y><w>86</w><h>14</h></coordinates><panel_attributes>lt=&lt;-
-m1=D</panel_attributes><additional_attributes>10;50;10;10;410;10</additional_attributes></element><element><id>Relation</id><coordinates><x>748</x><y>592</y><w>112</w><h>104</h></coordinates><panel_attributes>lt=&lt;-
-m1=T</panel_attributes><additional_attributes>10;430;10;500;500;500;500;10;540;10</additional_attributes></element><element><id>Relation</id><coordinates><x>874</x><y>620</y><w>8</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
-m1=S</panel_attributes><additional_attributes>10;180;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>910</x><y>576</y><w>94</w><h>114</h></coordinates><panel_attributes>Tablet._1_InterfaceLayer
+stelInHoreca (boolean H)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2107</x><y>840</y><w>301</w><h>49</h></coordinates><panel_attributes>lt=&lt;-
+m1=D</panel_attributes><additional_attributes>10;50;10;10;410;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2016</x><y>861</y><w>392</w><h>364</h></coordinates><panel_attributes>lt=&lt;-
+m1=T</panel_attributes><additional_attributes>10;430;10;500;500;500;500;10;540;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2457</x><y>959</y><w>28</w><h>140</h></coordinates><panel_attributes>lt=&lt;-
+m1=S</panel_attributes><additional_attributes>10;180;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>2583</x><y>805</y><w>329</w><h>399</h></coordinates><panel_attributes>Tablet._1_InterfaceLayer
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>916</x><y>624</y><w>40</w><h>10</h></coordinates><panel_attributes>DisplayServerImpl
+bg=#002c5a
+layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2604</x><y>973</y><w>140</w><h>35</h></coordinates><panel_attributes>DisplayServerImpl
 --
 --
-show (String header, String info)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>832</x><y>626</y><w>88</w><h>6</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;420;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>916</x><y>642</y><w>82</w><h>38</h></coordinates><panel_attributes>DisplayAttractiesServerImpl
+show (String header, String info)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2310</x><y>980</y><w>308</w><h>21</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;420;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2604</x><y>1036</y><w>287</w><h>133</h></coordinates><panel_attributes>DisplayAttractiesServerImpl
 --
 int Tid
 int aantal
@@ -135,18 +146,18 @@ boolean next ()
 stop ()
 getInfo (int tid, int x, int y, int radius, boolean horeca)
 String infoString ()
-cleanup()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>896</x><y>670</y><w>24</w><h>6</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>772</x><y>608</y><w>148</w><h>42</h></coordinates><panel_attributes>lt=&lt;-
-m1=D</panel_attributes><additional_attributes>10;10;10;190;720;190</additional_attributes></element><element><id>Relation</id><coordinates><x>978</x><y>394</y><w>42</w><h>252</h></coordinates><panel_attributes>lt=&lt;-
-m1=C</panel_attributes><additional_attributes>30;10;190;10;190;780;10;780;10;1240</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>140</x><y>356</y><w>634</w><h>172</h></coordinates><panel_attributes>BackEnd
+cleanup()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2534</x><y>1134</y><w>84</w><h>21</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2100</x><y>917</y><w>518</w><h>147</h></coordinates><panel_attributes>lt=&lt;-
+m1=D</panel_attributes><additional_attributes>10;10;10;190;720;190</additional_attributes></element><element><id>Relation</id><coordinates><x>2821</x><y>168</y><w>147</w><h>882</h></coordinates><panel_attributes>lt=&lt;-
+m1=C</panel_attributes><additional_attributes>30;10;190;10;190;780;10;780;10;1240</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>0</x><y>35</y><w>2107</w><h>602</h></coordinates><panel_attributes>BackEnd
 --
 bg=green
-layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>154</x><y>394</y><w>50</w><h>20</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+layer=-2</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>49</x><y>168</y><w>175</w><h>70</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 Fietstocht
 --
 --
 /int tid ()/
 /LocalDateTime tijd ()/
-/voegLocatieToe (LocalDateTime t, int x, int y)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>154</x><y>424</y><w>28</w><h>26</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+/voegLocatieToe (LocalDateTime t, int x, int y)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>49</x><y>273</y><w>98</w><h>91</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 Locatie
 --
 --
@@ -154,7 +165,7 @@ Locatie
 /LocalDateTime tijd ()/
 /LocalDateTime tijdStip ()/
 /int x ()/
-/int y ()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>154</x><y>462</y><w>24</w><h>26</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+/int y ()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>49</x><y>406</y><w>84</w><h>91</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 Attractie
 --
 --
@@ -162,11 +173,13 @@ Attractie
 /int x ()/
 /int y ()/
 /boolean isHoreca ()/
-/String  info ()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>148</x><y>382</y><w>62</w><h>124</h></coordinates><panel_attributes>BackEnd._5_DomainLayer
+/String  info ()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>28</x><y>126</y><w>217</w><h>434</h></coordinates><panel_attributes>BackEnd._5_DomainLayer
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>224</x><y>384</y><w>92</w><h>136</h></coordinates><panel_attributes>BackEnd._4_DomainImplLayer
+bg=#2c5a00
+layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>294</x><y>133</y><w>322</w><h>476</h></coordinates><panel_attributes>BackEnd._4_DomainImplLayer
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>394</y><w>52</w><h>28</h></coordinates><panel_attributes>FietstochtImpl
+bg=#2c5a00
+layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>315</x><y>168</y><w>182</w><h>98</h></coordinates><panel_attributes>FietstochtImpl
 --
 #int Tid
 #LocalDateTime Tijd
@@ -175,7 +188,7 @@ Attractie
 FietstochtImpl (LocalDateTime t, int tid)
 int tid ()
 LocalDateTime tijd ()
-voegLocatieToe (LocalDateTime t, int x, int y)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>428</y><w>78</w><h>40</h></coordinates><panel_attributes>LocatieImpl
+voegLocatieToe (LocalDateTime t, int x, int y)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>315</x><y>287</y><w>273</w><h>140</h></coordinates><panel_attributes>LocatieImpl
 --
 #int Tid
 #LocalDateTime Tijd
@@ -188,7 +201,7 @@ int tid ()
 LocalDateTime tijd ()
 LocalDateTime tijdStip ()
 int x ()
-int y ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>474</y><w>66</w><h>40</h></coordinates><panel_attributes>AttractieImpl
+int y ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>315</x><y>448</y><w>231</w><h>140</h></coordinates><panel_attributes>AttractieImpl
 --
 #String Naam
 #int X
@@ -201,14 +214,15 @@ String  naam ()
 int x ()
 int y ()
 boolean isHoreca ()
-String  info ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>436</y><w>54</w><h>6</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;250;10</additional_attributes></element><element><id>Relation</id><coordinates><x>202</x><y>402</y><w>32</w><h>6</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;140;10</additional_attributes></element><element><id>Relation</id><coordinates><x>176</x><y>478</y><w>58</w><h>6</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;270;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>566</x><y>366</y><w>120</w><h>154</h></coordinates><panel_attributes>BackEnd._2_ApplicationLayer
+String  info ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>315</y><w>189</w><h>21</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;250;10</additional_attributes></element><element><id>Relation</id><coordinates><x>217</x><y>196</y><w>112</w><h>21</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;140;10</additional_attributes></element><element><id>Relation</id><coordinates><x>126</x><y>462</y><w>203</w><h>21</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;270;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1379</x><y>70</y><w>420</w><h>539</h></coordinates><panel_attributes>BackEnd._2_ApplicationLayer
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>376</y><w>32</w><h>16</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+bg=#2c5a00
+layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1393</x><y>105</y><w>112</w><h>56</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
 GeefInfoAttractiesServer
 --
 --
 /setId (int tid)/
-/getInfo (String infoString)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>432</y><w>32</w><h>28</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+/getInfo (String infoString)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1393</x><y>301</y><w>112</w><h>98</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
 RegistreerAttractiesServer
 --
 --
@@ -217,7 +231,7 @@ RegistreerAttractiesServer
 /int getY ()/
 /String getHoreca ()/
 /String getInfo ()/
-/boolean next ()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>484</y><w>32</w><h>26</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+/boolean next ()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1393</x><y>483</y><w>112</w><h>91</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
 ToonFietstochtenServer
 --
 --
@@ -225,21 +239,21 @@ ToonFietstochtenServer
 /LocalDate datum ()/
 /void toon  (Fietstocht f)/
 /void toon  (Locatie l)/
-/void toon  (String s)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>622</x><y>494</y><w>58</w><h>16</h></coordinates><panel_attributes>UC_ToonFietstochten
+/void toon  (String s)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1575</x><y>518</y><w>203</w><h>56</h></coordinates><panel_attributes>UC_ToonFietstochten
 --
 #ToonFietstochtenServer S
 --
 UC_ToonFietstochten (ToonFietstochtenServer s)
-toon ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>498</y><w>26</w><h>8</h></coordinates><panel_attributes>lt=&lt;-
-m1=S</panel_attributes><additional_attributes>10;10;110;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>620</x><y>438</y><w>64</w><h>22</h></coordinates><panel_attributes>UC_RegistreerAttracties
+toon ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1498</x><y>532</y><w>91</w><h>28</h></coordinates><panel_attributes>lt=&lt;-
+m1=S</panel_attributes><additional_attributes>10;10;110;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1568</x><y>371</y><w>224</w><h>77</h></coordinates><panel_attributes>UC_RegistreerAttracties
 --
 RegistreerAttractiesServer
 List&lt;Attractie&gt; AlleTransacties
 --
 UC_RegistreerAttracties (RegistreerAttractiesServer  s)
 List&lt;Attracties&gt; all ()
-registreerAttractie()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>444</y><w>24</w><h>8</h></coordinates><panel_attributes>lt=&lt;-
-m1=S</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>620</x><y>376</y><w>64</w><h>28</h></coordinates><panel_attributes>UC_GeefInfoAttracties
+registreerAttractie()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1498</x><y>378</y><w>84</w><h>28</h></coordinates><panel_attributes>lt=&lt;-
+m1=S</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1568</x><y>105</y><w>224</w><h>98</h></coordinates><panel_attributes>UC_GeefInfoAttracties
 --
 GeefInfoAttractiesServer Server
 Fietstocht Tocht
@@ -248,18 +262,19 @@ UC_GeefInfoAttracties(GeefInfoAttractiesServer s)
 laadAttracties()
 start (int tid)
 String getInfo (int tid, String tabletMessage)
-stop (int tid)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>382</y><w>24</w><h>8</h></coordinates><panel_attributes>lt=&lt;-
-m1=Server</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>186</x><y>376</y><w>438</w><h>28</h></coordinates><panel_attributes>lt=&lt;-
-m1=Tocht</panel_attributes><additional_attributes>10;90;10;10;1840;10;1840;120;2170;120</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>694</x><y>366</y><w>72</w><h>154</h></coordinates><panel_attributes>BackEnd._1_InterfaceLayer
+stop (int tid)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1498</x><y>126</y><w>84</w><h>28</h></coordinates><panel_attributes>lt=&lt;-
+m1=Server</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>161</x><y>105</y><w>1421</w><h>98</h></coordinates><panel_attributes>lt=&lt;-
+m1=Tocht</panel_attributes><additional_attributes>10;90;10;10;1680;10;1680;120;2010;120</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1827</x><y>70</y><w>252</w><h>539</h></coordinates><panel_attributes>BackEnd._1_InterfaceLayer
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>702</x><y>486</y><w>42</w><h>24</h></coordinates><panel_attributes>ToonFietstochtenServerImpl
+bg=#2c5a00
+layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1855</x><y>490</y><w>147</w><h>84</h></coordinates><panel_attributes>ToonFietstochtenServerImpl
 --
 --
 int tid ()
 LocalData datum ()
 toon (Fietstocht f)
 toon (Locatie l)
-toon (String s)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>582</x><y>390</y><w>124</w><h>26</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;110;600;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>702</x><y>432</y><w>40</w><h>34</h></coordinates><panel_attributes>RegistreerAttractiesServerImpl
+toon (String s)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1435</x><y>154</y><w>434</w><h>77</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;90;600;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1855</x><y>343</y><w>140</w><h>119</h></coordinates><panel_attributes>RegistreerAttractiesServerImpl
 --
 --
 getString (String vraag)
@@ -270,7 +285,7 @@ int getY ()
 String getHoreca ()
 String getInfo ()
 boolean next ()
-toonOverzicht ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>432</y><w>106</w><h>6</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;510;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>702</x><y>386</y><w>58</w><h>36</h></coordinates><panel_attributes>GeefInfoAttractiesServerImpl
+toonOverzicht ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1498</x><y>343</y><w>371</w><h>21</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;510;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1855</x><y>98</y><w>203</w><h>126</h></coordinates><panel_attributes>GeefInfoAttractiesServerImpl
 --
 int Tid
 UC_GeefInfoAttracties AIUC
@@ -281,128 +296,137 @@ GeefInfoAttractiesServerImpl (MqttClientServer C)
 setAiuc (UC_GeefInfoAttracties aiuc)
 setId (int tid)
 getInfo(String infoString)
-cleanup()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>488</y><w>106</w><h>6</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;510;10</additional_attributes></element><element><id>Relation</id><coordinates><x>682</x><y>392</y><w>24</w><h>8</h></coordinates><panel_attributes>lt=&lt;-
-m1=AIUC</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>726</x><y>346</y><w>294</w><h>48</h></coordinates><panel_attributes>lt=&lt;-
-m1=C</panel_attributes><additional_attributes>1290;210;1450;210;1450;10;10;10;10;200</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>824</x><y>352</y><w>186</w><h>182</h></coordinates><panel_attributes>Cloud
+cleanup()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1498</x><y>497</y><w>371</w><h>21</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;510;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1785</x><y>161</y><w>84</w><h>28</h></coordinates><panel_attributes>lt=&lt;-
+m1=AIUC</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1939</x><y>0</y><w>1029</w><h>168</h></coordinates><panel_attributes>lt=&lt;-
+m1=C</panel_attributes><additional_attributes>1290;210;1450;210;1450;10;10;10;10;140</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>2282</x><y>21</y><w>651</w><h>637</h></coordinates><panel_attributes>Cloud
 --
 bg=red
-layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>832</x><y>362</y><w>42</w><h>162</h></coordinates><panel_attributes>Cloud.Main
+layer=-2</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>2310</x><y>56</y><w>147</w><h>567</h></coordinates><panel_attributes>Cloud.Main
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>412</y><w>54</w><h>22</h></coordinates><panel_attributes>lt=&lt;-
-m1=LocatieLijst</panel_attributes><additional_attributes>10;80;170;80;170;10;250;10</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>380</y><w>474</w><h>62</h></coordinates><panel_attributes>lt=&lt;-
-m1=AlleTransacties</panel_attributes><additional_attributes>10;270;190;270;190;10;1840;10;1840;230;2350;230;2350;290</additional_attributes></element><element><id>Relation</id><coordinates><x>198</x><y>378</y><w>244</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
-m1=all ()</panel_attributes><additional_attributes>10;80;10;10;790;10;790;450;1200;450;1200;530</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>442</y><w>228</w><h>46</h></coordinates><panel_attributes>lt=&lt;-
-m1=all ()</panel_attributes><additional_attributes>10;10;170;10;170;140;1120;140;1120;210</additional_attributes></element><element><id>Relation</id><coordinates><x>176</x><y>470</y><w>200</w><h>58</h></coordinates><panel_attributes>lt=&lt;-
-m1=all ()</panel_attributes><additional_attributes>10;70;190;70;190;270;740;270;740;10;980;10;980;70</additional_attributes></element><element><id>Relation</id><coordinates><x>982</x><y>368</y><w>28</w><h>92</h></coordinates><panel_attributes>lt=&lt;-
-m1=CB</panel_attributes><additional_attributes>10;10;120;10;120;440;80;440</additional_attributes></element><element><id>Relation</id><coordinates><x>984</x><y>422</y><w>26</w><h>30</h></coordinates><panel_attributes>lt=&lt;-
-m1=subscribed</panel_attributes><additional_attributes>50;130;50;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>840</x><y>496</y><w>26</w><h>16</h></coordinates><panel_attributes>ChildThreath
+bg=#5a002c
+layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>231</y><w>189</w><h>77</h></coordinates><panel_attributes>lt=&lt;-
+m1=LocatieLijst</panel_attributes><additional_attributes>10;80;170;80;170;10;250;10</additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>119</y><w>1547</w><h>266</h></coordinates><panel_attributes>lt=&lt;-
+m1=AlleTransacties</panel_attributes><additional_attributes>10;270;30;270;30;10;1680;10;1680;250;2190;250;2190;360</additional_attributes></element><element><id>Relation</id><coordinates><x>203</x><y>112</y><w>742</w><h>385</h></coordinates><panel_attributes>lt=&lt;-
+m1=all ()</panel_attributes><additional_attributes>10;80;10;10;630;10;630;450;1040;450;1040;530</additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>336</y><w>707</w><h>161</h></coordinates><panel_attributes>lt=&lt;-
+m1=all ()</panel_attributes><additional_attributes>10;10;180;10;180;140;990;140;990;210</additional_attributes></element><element><id>Relation</id><coordinates><x>126</x><y>476</y><w>574</w><h>161</h></coordinates><panel_attributes>lt=&lt;-
+m1=all ()</panel_attributes><additional_attributes>10;10;200;10;200;210;740;210;740;70;800;70</additional_attributes></element><element><id>Relation</id><coordinates><x>2835</x><y>77</y><w>98</w><h>322</h></coordinates><panel_attributes>lt=&lt;-
+m1=CB</panel_attributes><additional_attributes>10;10;120;10;120;440;80;440</additional_attributes></element><element><id>Relation</id><coordinates><x>2842</x><y>266</y><w>91</w><h>105</h></coordinates><panel_attributes>lt=&lt;-
+m1=subscribed</panel_attributes><additional_attributes>50;130;50;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2338</x><y>525</y><w>91</w><h>56</h></coordinates><panel_attributes>ChildThreath
 --
 #int Tid
 --
 ChildThread (int tid)
-run ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>840</x><y>378</y><w>26</w><h>14</h></coordinates><panel_attributes>main
+run ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2338</x><y>112</y><w>91</w><h>49</h></coordinates><panel_attributes>main
 --
 --
 log ()
-main (String[] args)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>864</x><y>500</y><w>70</w><h>10</h></coordinates><panel_attributes>lt=&lt;-
+main (String[] args)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2422</x><y>539</y><w>245</w><h>35</h></coordinates><panel_attributes>lt=&lt;-
 m1=alles
-&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>330;20;120;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>864</x><y>384</y><w>68</w><h>10</h></coordinates><panel_attributes>lt=&lt;-
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>330;20;120;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>2422</x><y>133</y><w>238</w><h>35</h></coordinates><panel_attributes>lt=&lt;-
 m1=ClientBackEnd
-&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>320;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>758</x><y>380</y><w>86</w><h>24</h></coordinates><panel_attributes>lt=&lt;-
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>320;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>2051</x><y>119</y><w>301</w><h>84</h></coordinates><panel_attributes>lt=&lt;-
 m1=AIUCS
-&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;90;120;90;120;20;410;20</additional_attributes></element><element><id>Relation</id><coordinates><x>648</x><y>360</y><w>196</w><h>24</h></coordinates><panel_attributes>lt=&lt;-
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;90;120;90;120;20;410;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1666</x><y>49</y><w>686</w><h>84</h></coordinates><panel_attributes>lt=&lt;-
 m1=AUC
-&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;80;10;20;720;20;720;100;960;100</additional_attributes></element><element><id>Relation</id><coordinates><x>740</x><y>384</y><w>104</w><h>72</h></coordinates><panel_attributes>lt=&lt;-
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;80;10;20;720;20;720;100;960;100</additional_attributes></element><element><id>Relation</id><coordinates><x>1988</x><y>133</y><w>364</w><h>294</h></coordinates><panel_attributes>lt=&lt;-
 m1=S
-&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;330;250;330;250;10;500;10</additional_attributes></element><element><id>Relation</id><coordinates><x>664</x><y>386</y><w>180</w><h>88</h></coordinates><panel_attributes>lt=&lt;-
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;390;250;390;250;10;500;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1722</x><y>140</y><w>630</w><h>343</h></coordinates><panel_attributes>lt=&lt;-
 m1=UCR
-&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;370;10;420;690;420;690;10;880;10</additional_attributes></element><element><id>Relation</id><coordinates><x>742</x><y>388</y><w>102</w><h>118</h></coordinates><panel_attributes>lt=&lt;-
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;440;10;470;690;470;690;10;880;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1995</x><y>147</y><w>357</w><h>413</h></coordinates><panel_attributes>lt=&lt;-
 m1=TFS
-&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;560;310;560;310;10;490;10</additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>390</y><w>196</w><h>132</h></coordinates><panel_attributes>lt=&lt;-
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;560;310;560;310;10;490;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1673</x><y>154</y><w>686</w><h>462</h></coordinates><panel_attributes>lt=&lt;-
 m1=UCTFT
-&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;600;10;640;830;640;830;40;960;40;960;10</additional_attributes></element><element><id>Relation</id><coordinates><x>856</x><y>510</y><w>88</w><h>118</h></coordinates><panel_attributes>lt=&lt;-
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;600;10;640;830;640;830;40;960;40;960;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2394</x><y>574</y><w>308</w><h>413</h></coordinates><panel_attributes>lt=&lt;-
 m1=DSI
-&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>400;570;400;220;10;220;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>768</x><y>510</y><w>86</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>400;570;400;220;10;220;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2086</x><y>574</y><w>301</w><h>315</h></coordinates><panel_attributes>lt=&lt;-
 m1=D
-&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;430;10;240;410;240;410;10</additional_attributes></element><element><id>Relation</id><coordinates><x>860</x><y>510</y><w>110</w><h>136</h></coordinates><panel_attributes>lt=&lt;-
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;430;10;240;410;240;410;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2408</x><y>574</y><w>385</w><h>476</h></coordinates><panel_attributes>lt=&lt;-
 m1=ADS
-&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>510;660;510;200;10;200;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>852</x><y>510</y><w>46</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>510;660;510;200;10;200;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2380</x><y>574</y><w>161</w><h>280</h></coordinates><panel_attributes>lt=&lt;-
 m1=UCAD
-&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>180;380;180;240;10;240;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>328</x><y>476</y><w>138</w><h>46</h></coordinates><panel_attributes>BackEnd._3_DAOLayerImpl
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>180;380;180;240;10;240;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>672</x><y>455</y><w>357</w><h>161</h></coordinates><panel_attributes>BackEnd._3_DAOLayerImpl
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>432</x><y>484</y><w>26</w><h>22</h></coordinates><panel_attributes>FietstochtDao
+bg=#2c5a00
+layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>910</x><y>483</y><w>91</w><h>77</h></coordinates><panel_attributes>FietstochtDao
 --
 #Database DB
 --
 List&lt;Fietstocht&gt; all ()
 insert (Fietsocht t)
 update (Fietstocht t)
-delete (Fietstocht t)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>484</y><w>26</w><h>22</h></coordinates><panel_attributes>AttractieDao
+delete (Fietstocht t)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>798</x><y>483</y><w>91</w><h>77</h></coordinates><panel_attributes>AttractieDao
 --
 #Database DB
 --
 List&lt;Attractie&gt; all ()
 insert (Attractie A)
 update (Attractie A)
-delete (Attractie A)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>368</x><y>484</y><w>26</w><h>22</h></coordinates><panel_attributes>LocatieDao
+delete (Attractie A)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>686</x><y>483</y><w>91</w><h>77</h></coordinates><panel_attributes>LocatieDao
 --
 #Database DB
 --
 List&lt;Locatie&gt; all ()
 insert (Locatie l)
 update (Locatie l)
-delete (Locatie l)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>378</x><y>452</y><w>130</w><h>68</h></coordinates><panel_attributes>lt=&lt;-
-m1=DB</panel_attributes><additional_attributes>630;10;530;10;530;320;10;320;10;270</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>446</y><w>98</w><h>68</h></coordinates><panel_attributes>lt=&lt;-
-m1=DB</panel_attributes><additional_attributes>470;10;340;10;340;320;10;320;10;300</additional_attributes></element><element><id>Relation</id><coordinates><x>456</x><y>440</y><w>52</w><h>64</h></coordinates><panel_attributes>lt=&lt;-
-m1=DB</panel_attributes><additional_attributes>240;10;80;10;80;300;10;300</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>494</x><y>476</y><w>62</w><h>36</h></coordinates><panel_attributes>BackEnd.InfrastructureLayerImpl
+delete (Locatie l)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>721</x><y>371</y><w>455</w><h>238</h></coordinates><panel_attributes>lt=&lt;-
+m1=DB</panel_attributes><additional_attributes>630;10;530;10;530;320;10;320;10;270</additional_attributes></element><element><id>Relation</id><coordinates><x>833</x><y>350</y><w>343</w><h>238</h></coordinates><panel_attributes>lt=&lt;-
+m1=DB</panel_attributes><additional_attributes>470;10;340;10;340;320;10;320;10;300</additional_attributes></element><element><id>Relation</id><coordinates><x>994</x><y>329</y><w>182</w><h>224</h></coordinates><panel_attributes>lt=&lt;-
+m1=DB</panel_attributes><additional_attributes>240;10;80;10;80;300;10;300</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1127</x><y>455</y><w>217</w><h>126</h></coordinates><panel_attributes>BackEnd.InfrastructureLayerImpl
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>504</x><y>486</y><w>42</w><h>20</h></coordinates><panel_attributes>Database
+bg=#2c5a00
+layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1162</x><y>490</y><w>147</w><h>70</h></coordinates><panel_attributes>Database
 (Singleton)
 --
 # Database object
 --
 # Database()
-Connection connect(String url)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>494</x><y>428</y><w>62</w><h>36</h></coordinates><panel_attributes>BackEnd.InfrastructureLayer
+Connection connect(String url)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1127</x><y>287</y><w>217</w><h>126</h></coordinates><panel_attributes>BackEnd.InfrastructureLayer
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>504</x><y>438</y><w>42</w><h>20</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+bg=#2c5a00
+layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1162</x><y>322</y><w>147</w><h>70</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 Database
 --
 --
-/Connection connect(String url)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>536</x><y>456</y><w>6</w><h>34</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>360</x><y>388</y><w>100</w><h>76</h></coordinates><panel_attributes>BackEnd._3_DAOIntLayer
+/Connection connect(String url)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1274</x><y>385</y><w>21</w><h>119</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>658</x><y>147</y><w>350</w><h>266</h></coordinates><panel_attributes>BackEnd._3_DAOIntLayer
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>438</y><w>26</w><h>22</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+bg=#2c5a00
+layer=-1</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>903</x><y>322</y><w>91</w><h>77</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 FietstochtDao
 --
 --
 /List&lt;Fietstocht&gt; all ()/
 /insert (Fietsocht t)/
 /update (Fietstocht t)/
-/delete (Fietstocht t)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>398</x><y>438</y><w>26</w><h>22</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+/delete (Fietstocht t)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>791</x><y>322</y><w>91</w><h>77</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 AttractieDao
 --
 --
 /List&lt;Attractie&gt; all ()/
 /insert (Attractie A)/
 /update (Attractie A)/
-/delete (Attractie A)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>366</x><y>438</y><w>26</w><h>22</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+/delete (Attractie A)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>679</x><y>322</y><w>91</w><h>77</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 LocatieDao
 --
 --
 /List&lt;Locatie&gt; all ()/
 /insert (Locatie l)/
 /update (Locatie l)/
-/delete (Locatie l)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>444</x><y>458</y><w>6</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>408</x><y>458</y><w>6</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>378</x><y>458</y><w>6</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>398</x><y>394</y><w>26</w><h>22</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+/delete (Locatie l)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>952</x><y>392</y><w>21</w><h>105</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>854</x><y>392</y><w>21</w><h>105</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>721</x><y>392</y><w>21</w><h>105</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>791</x><y>168</y><w>91</w><h>77</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 DaoFactory
 --
 --
 makeLocatieDao()
 makeAttractieDao()
 makeFietstochtDao()
-makeDatabase()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>408</x><y>414</y><w>6</w><h>28</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>416</x><y>414</y><w>32</w><h>28</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>140;120;140;50;10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>378</x><y>414</y><w>28</w><h>28</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;120;10;50;120;50;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>422</x><y>406</y><w>118</w><h>36</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>570;160;570;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>404</y><w>62</w><h>84</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>290;10;10;10;10;400</additional_attributes></element><element><id>UMLClass</id><coordinates><x>336</x><y>484</y><w>26</w><h>22</h></coordinates><panel_attributes>DaoDefaultFactory
+makeDatabase()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>826</x><y>238</y><w>21</w><h>98</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>854</x><y>238</y><w>112</w><h>98</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>140;120;140;50;10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>721</x><y>238</y><w>98</w><h>98</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;120;10;50;120;50;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>875</x><y>210</y><w>413</w><h>126</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>570;160;570;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>875</x><y>175</y><w>994</w><h>91</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;590;10;590;110;1400;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1855</x><y>245</y><w>91</w><h>77</h></coordinates><panel_attributes>DaoDefaultFactory
 --
 --
 DaoFactory()
 makeLocatieDao()
 makeAttractieDao()
 makeFietstochtDao()
-makeDatabase()</panel_attributes><additional_attributes></additional_attributes></element></diagram>
+makeDatabase()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>756</x><y>245</y><w>1113</w><h>252</h></coordinates><panel_attributes>lt=&lt;-
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;340;10;290;380;290;380;20;1570;20</additional_attributes></element><element><id>Relation</id><coordinates><x>868</x><y>252</y><w>1001</w><h>245</h></coordinates><panel_attributes>lt=&lt;-
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;330;10;290;230;290;230;20;1410;20</additional_attributes></element><element><id>Relation</id><coordinates><x>980</x><y>259</y><w>889</w><h>238</h></coordinates><panel_attributes>lt=&lt;-
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;320;10;290;80;290;80;20;1250;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1288</x><y>266</y><w>581</w><h>238</h></coordinates><panel_attributes>lt=&lt;-
+&lt;&lt;creates&gt;&gt;</panel_attributes><additional_attributes>10;320;10;270;100;270;100;20;810;20</additional_attributes></element></diagram>
