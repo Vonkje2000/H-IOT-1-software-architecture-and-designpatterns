@@ -1,0 +1,61 @@
+<diagram program="umletino" version="15.1"><zoom_level>11</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLPackage</id><coordinates><x>11</x><y>88</y><w>781</w><h>275</h></coordinates><panel_attributes>Pressentationlaye
+--
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>11</x><y>385</y><w>781</w><h>352</h></coordinates><panel_attributes>Domain layer
+--
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>77</x><y>132</y><w>176</w><h>55</h></coordinates><panel_attributes>Applicatie
+--
+vraagSnelheidButtonClick()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>33</x><y>440</y><w>165</w><h>66</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Input
+--
+/vraagWaarde() : Integer/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>66</x><y>605</y><w>187</w><h>99</h></coordinates><panel_attributes>Auto
+--
+GewensteSnelheid : Integer
+--
+snelheid () : Snelheid
+setGewensteSnelheid ()
+naarSnelheid ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>418</x><y>143</y><w>99</w><h>55</h></coordinates><panel_attributes>DigitaleMeter
+--
+--
+update()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>473</x><y>242</y><w>110</w><h>55</h></coordinates><panel_attributes>AnalogeMeter
+--
+--
+update()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>638</x><y>143</y><w>110</w><h>33</h></coordinates><panel_attributes>JLabel</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>638</x><y>231</y><w>110</w><h>33</h></coordinates><panel_attributes>JProgressBar</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>341</x><y>594</y><w>132</w><h>99</h></coordinates><panel_attributes>Snelheid
+--
+Waard : Integer
+--
+waarde () : Integer
+verhoog ()
+verlaag ()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>506</x><y>143</y><w>154</w><h>33</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>572</x><y>242</y><w>88</w><h>33</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>242</x><y>616</y><w>121</w><h>55</h></coordinates><panel_attributes>lt=&lt;-
+r1=huidige- 
+
+Snelheid</panel_attributes><additional_attributes>90;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>242</x><y>132</y><w>198</w><h>44</h></coordinates><panel_attributes>lt=&lt;-
+r1=digitaleMeter</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>77</x><y>495</y><w>99</w><h>132</h></coordinates><panel_attributes>lt=&lt;-
+r1=inputObject</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>209</x><y>176</y><w>44</w><h>451</h></coordinates><panel_attributes>lt=&lt;-
+r1=A</panel_attributes><additional_attributes>10;390;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>176</y><w>33</w><h>286</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;240;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>242</x><y>165</y><w>253</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+r1=analogeMeter</panel_attributes><additional_attributes>210;80;30;80;30;10;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>814</x><y>88</y><w>341</w><h>649</h></coordinates><panel_attributes>Infrastructure Layer
+--
+bg=#6666ff</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>869</x><y>330</y><w>231</w><h>132</h></coordinates><panel_attributes>ChangeManager
+--
+map : HasMap&lt;Observer,Subject&gt;
+--
+get (Observer x)
+register (Subject S, Observer x)
+unregister (Observer x)
+notifyObservers (Subject S)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>869</x><y>517</y><w>231</w><h>143</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+Subject
+--
+M : ChangeManager
+--
+insertObserver(Observer x)
+removeObserver(Observer x)
+notifyObserver()
+get (Observer x)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>869</x><y>165</y><w>231</w><h>77</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+Observer
+--
+--
+/update()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>968</x><y>451</y><w>44</w><h>88</h></coordinates><panel_attributes>lt=&lt;-
+r1=M</panel_attributes><additional_attributes>10;10;10;40;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>968</x><y>231</y><w>55</w><h>121</h></coordinates><panel_attributes>lt=&lt;-
+r1=map</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>572</x><y>198</y><w>319</w><h>110</h></coordinates><panel_attributes>lt=.&gt;&gt;</panel_attributes><additional_attributes>10;80;230;80;230;10;270;10</additional_attributes></element><element><id>Relation</id><coordinates><x>506</x><y>176</y><w>385</w><h>33</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>330;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>462</x><y>616</y><w>429</w><h>33</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>370;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>363</x><y>176</y><w>77</w><h>440</h></coordinates><panel_attributes>lt=&lt;-
+r1=S</panel_attributes><additional_attributes>10;380;10;10;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>275</y><w>55</w><h>341</h></coordinates><panel_attributes>lt=&lt;-
+r1=S</panel_attributes><additional_attributes>10;290;10;10;30;10</additional_attributes></element></diagram>

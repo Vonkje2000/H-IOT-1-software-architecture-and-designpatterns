@@ -1,0 +1,5 @@
+'DisplayServerImpl' met Abstract Server 'DisplayServer'
+'DisplayAttractieServerImpl' met Abstract Server 'DisplayAttractieServer'
+'GeefInfoAttractieServerImpl' met Abstract Server 'GeefInfoAttractieServer'
+'RegistreerAttractieServerImpl' met Abstract Server 'RegistreerAttractieServer'
+'ToonFietstochtenServerImpl' met Abstract Server 'ToonFietstochtenServer'

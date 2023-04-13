@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="IoT_Practicum_Opdracht_1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/IoT_Practicum_Opdracht_1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

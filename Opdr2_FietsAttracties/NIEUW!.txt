@@ -1,0 +1,1 @@
+- Static functies verwijderd uit de DAO's, is veel handiger.
